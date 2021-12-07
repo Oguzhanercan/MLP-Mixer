@@ -1,6 +1,8 @@
 # MLP-Mixer
 ### Unoffical Implementation of MLP-Mixer, easy to use with terminal. Train and test easly.
 
+https://arxiv.org/abs/2105.01601
+
 ![N|Solid](https://warehouse-camo.ingress.cmh1.psfhosted.org/18dc7ec6217146811d48b4b4c9aa51721f9df623/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f323430302f312a4471727a6e454b7a525f78422d434568704f617633412e706e67)
 
 MLP-Mixer is an architecture based exclusively on multi-layer perceptrons (MLPs).
