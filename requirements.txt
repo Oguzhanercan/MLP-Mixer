@@ -1,0 +1,11 @@
+#pip install -r requirements.txt
+
+argparse
+os
+torch
+torchvision
+einops
+numpy
+pathlib
+cv2
+tqdm
