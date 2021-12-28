@@ -112,7 +112,7 @@ def get_dataloader(args):
         args.im_size = 256
         if mode == "train":
             dataset = torchvision.datasets.Places365(
-                directory, transform=transform,small = True, download=True)
+                directory, transform=transform,small = True, split = "train-challenge",download=True)
         elif mode == "test":
             dataset = torchvision.datasets.CelebA(
                 directory, transform=transform, small=False, download=True)
