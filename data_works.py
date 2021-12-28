@@ -112,10 +112,10 @@ def get_dataloader(args):
         args.im_size = 256
         if mode == "train":
             dataset = torchvision.datasets.Places365(
-                directory, transform=transform,small = True download=True)
+                directory, transform=transform,small = True, download=True)
         elif mode == "test":
             dataset = torchvision.datasets.CelebA(
-                directory, transform=transform, train=False, download=True)
+                directory, transform=transform, small=False, download=True)
         else:
             print("Invalid mode")
         return train_val_loader(dataset, args)
