@@ -14,7 +14,7 @@ def test(args, testloader, model, criterion):
             loss = criterion(output, target)
             testloss += loss.item()
             #_, predicted = torch.max(output, 1)
-            _,predicted = torch.max(nn.Softmax()(preds),dim = 1)
+            _,predicted = torch.max(nn.Softmax()(output),dim = 1)
             correct += (predicted == target).sum().item()
             i += 1
 
