@@ -112,7 +112,7 @@ def get_dataloader(args):
         args.im_size = 28
         if mode == "train":
             dataset = torchvision.datasets.CelebA(
-                directory, transform=transform, train=True, download=True)
+                directory, transform=transform, download=True)
         elif mode == "test":
             dataset = torchvision.datasets.CelebA(
                 directory, transform=transform, train=False, download=True)
