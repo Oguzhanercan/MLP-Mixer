@@ -128,4 +128,4 @@ def get_dataloader(args):
 
         else:
             print("Invalid mode")
-    return train_val_loader(dataset, args)
+        return train_val_loader(dataset, args)
