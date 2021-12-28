@@ -107,7 +107,19 @@ def get_dataloader(args):
         else:
             print("Invalid mode")
         return train_val_loader(dataset, args)
-
+    
+    elif data == "CELEBA":
+        args.im_size = 28
+        if mode == "train":
+            dataset = torchvision.datasets.CelebA(
+                directory, transform=transform, train=True, download=True)
+        elif mode == "test":
+            dataset = torchvision.datasets.CelebA(
+                directory, transform=transform, train=False, download=True)
+        else:
+            print("Invalid mode")
+        return train_val_loader(dataset, args)
+    
     elif data == "CUSTOM":
         if mode == "train":
             dataset = Custom_Dataset(args.train_path)
