@@ -16,7 +16,7 @@ def main(args):
         arguments = input()
         os.system(os.getcwd() + "/main.py " + arguments)
     
-    model = mm.Mixer(num_classes= args.n_classes, img_size = args.im_size)
+    model = mm.Mixer(num_classes= args.n_classes, img_size = args.im_size).to(device)
     if args.model_params != "none":
         try:
             model.load_state_dict(torch.load(args.load_params))
