@@ -1,6 +1,6 @@
 import torch
 from tqdm import tqdm
-
+import torch.nn as nn
 
 def test(args, testloader, model, criterion):
     model.eval()
