@@ -65,8 +65,9 @@ def get_dataloader(args):
     mode = args.mode
     directory = os. getcwd()
     transform = transforms.Compose([
+        transforms.RandomResizedCrop((args.img_size, args.img_size), scale=(0.05, 1.0)),
         transforms.ToTensor(),
-        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+        transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
 
     ])
 
