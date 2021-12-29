@@ -73,7 +73,7 @@ class Classifier(nn.Module):
         
         
 class Mixer(nn.Module):
-    def __init__(self,num_classes,in_channels = 3,img_size = 224,patch_size = 16,hidden_dim = 512,token_mix_hidden = 256,channel_mix_hidden = 2048,num_layer =8):
+    def __init__(self,num_classes,in_channels = 3,img_size = 224,patch_size = 8,hidden_dim = 512,token_mix_hidden = 256,channel_mix_hidden = 2048,num_layer =8):
         super().__init__()
         self.num_patches = (img_size//patch_size)**2
         self.projector = Project(patch_size,in_channels,hidden_dim)
