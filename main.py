@@ -113,7 +113,7 @@ if __name__ == "__main__":
                         "-ilr",
                         help="initial learning rate for Adam",
                         type = float,
-                        default = 0.001
+                        default = 0.0003
     )
 
     parser.add_argument("--weight_decay",
@@ -126,13 +126,13 @@ if __name__ == "__main__":
                         "-b1",
                         help="Beta1 for Adam",
                         type = float,
-                        default = 0.001,)
+                        default = 0.9,)
 
     parser.add_argument("--beta2",
                         "-b2",
-                        help="initial learning rate for Adam",
+                        help="Beta2 for Adam",
                         type = float,
-                        default = 0.001,)
+                        default = 0.999,)
 
 
     parser.add_argument("--device",
