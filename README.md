@@ -55,21 +55,22 @@ python main.py --mode train --dataset CIFAR10 --save True --device cuda --epochs
 ```
 You can customize the model hyperparameters, all arguments listed below
 "Arguments:
-- dataset
-- train_path
-- test_path
-- batch_size
-- im_size
-- valid_per
-- epochs
-- learning_rate
-- beta1
-- beta2
-- n_classes
-- cuda
-- -eveluate_per_epoch
-- save_model
-- model_path
+- dataset : Categorical Option --- Choose the dataset, Options: CIFAR10, Mnist, Fashion Mnist, Custom
+- train_path : Path --- Enter the train path, if you are using custom dataset mode
+- test_path : Path --- Enter the test path, if you are using custom dataset mode
+- batch_size : integer number ---
+- im_size : integer number --- Enter the biggest dimension of image, Example : for 48x32x3 enter 48
+- valid_per : float number between 0,1 --- Validation percantage, train dataset will be splitted as train and validation
+- epochs : integer number --- Number of epochs to train
+- learning_rate : float number  --- Learning rate for optimizer
+- beta1 : float number between 0,1 --- Beta1 value for adam optimizer
+- beta2 : float number between 0,1 --- Beta2 value for adam optimizer
+- n_classes : integer number --- Number of classes that dataset has
+- cuda : True or false --- if you have cuda compute capability enviroment True suggested
+- -eveluate_per_epoch : integer number --- Prints the state information per epoch
+- save_model : True or False --- If true model parameters will be saved.
+- model_params : Path --- If you have pretrained parameters, enter the path
+
 
 ###### Custom dataset mode should include following arguments: mode,dataset,train_path,n_classes,im_size
 
